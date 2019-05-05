@@ -1,4 +1,4 @@
-//CARRDS AGAINS HUMANITY
+//CARDS AGAINS HUMANITY
 // Scritto da: Bulgarelli Marco, Barbieri Kevin, Perboni Nicholas
 //NOTA: pulire i \n dalle frasi lette (strtok)
 //      allineare bene le barre dei giocatori quando le stampi
