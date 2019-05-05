@@ -1,4 +1,5 @@
 //CARRDS AGAINS HUMANITY
+// Scritto da: Bulgarelli Marco, Barbieri Kevin, Perboni Nicholas
 //NOTA: pulire i \n dalle frasi lette (strtok)
 //      allineare bene le barre dei giocatori quando le stampi
 
@@ -15,7 +16,7 @@
 #define MIN_POINTS 1  //numero minimo di round da giocare
 #define CPP 10        //cards per player
 
-//typedef tralasciato perchÈ i warning mi davano fastidio
+//typedef tralasciato perch√© i warning mi davano fastidio
 struct Parola{
 	char parola[LEN];
 	bool usata=false;
@@ -59,14 +60,14 @@ int main(){
 
 	title();
 	disclamer();   
-	check_file();    //controlla integrit‡ dei file 
+	check_file();    //controlla integrit√† dei file 
 	
 	
 //##################################################################################################
 //           CREZIONE VETTORI E VARIBILI VARIE CHE POI SERVIRANNO NEL MAIN GAME LOOP 
 //##################################################################################################
 
-	//conteggio parole presenti nel txt (una riga Ë intesa come una parola)
+	//conteggio parole presenti nel txt (una riga √® intesa come una parola)
 	fp=fopen("files\\parole.txt","r");
 	while(1){
 		if(feof(fp)){
@@ -152,7 +153,7 @@ int main(){
 	printf("creazione array giocatori...");
 	Giocatore g[PN];
 	
-	//scelta difficolt‡
+	//scelta difficolt√†
 	system("cls");
 	title();
 	printf("Scegli la difficolta'\n\n");
@@ -305,7 +306,7 @@ int main(){
 						scanf("%d",&scelta[0]);
 						fflush(stdin);
 					
-						if(strcmp(g[i].mazzo_usate[scelta[0]-1],"0")==0){ //se la carta non Ë ancora stata usata
+						if(strcmp(g[i].mazzo_usate[scelta[0]-1],"0")==0){ //se la carta non √® ancora stata usata
 							strcpy(g[i].frase, str_replace_once(frase_in_gioco, "________", g[i].mazzo[scelta[0]-1])); //inserisci parola in frase
 							strcpy(g[i].mazzo_usate[scelta[0]-1], "1");												   //rendi parola usata non piu disponibile
 						}
@@ -322,7 +323,7 @@ int main(){
 							scanf("%d",&scelta[j]);
 							fflush(stdin);
 						
-							if(strcmp(g[i].mazzo_usate[scelta[j]-1],"0")==0){ //se la carta non Ë ancora stata usata
+							if(strcmp(g[i].mazzo_usate[scelta[j]-1],"0")==0){ //se la carta non √® ancora stata usata
 								//per ogni gap, sostituisci la scelta ai trattini
 								strcpy(g[i].frase, str_replace_once(frase_in_gioco, "________", g[i].mazzo[scelta[j]-1])); //inserisci parola in frase
 								strcpy(frase_in_gioco, g[i].frase);			                                               //aggiorna frase in gioco per il prossimo ciclo di j
@@ -344,7 +345,7 @@ int main(){
 					}
 				}
 		
-				else{ //se la difficolta' Ë easy
+				else{ //se la difficolta' √® easy
 					
 					//ad ogni turno do parole nuove ai giocatori
 					for(int j=0; j<PN; j++){
@@ -391,7 +392,7 @@ int main(){
 							scanf("%d",&scelta[j]);
 							fflush(stdin);
 						
-							if(strcmp(g[i].mazzo_usate[scelta[j]-1],"0")==0){ //se la carta non Ë ancora stata usata
+							if(strcmp(g[i].mazzo_usate[scelta[j]-1],"0")==0){ //se la carta non √® ancora stata usata
 								//per ogni gap, sostituisci la scelta ai trattini
 								strcpy(g[i].frase, str_replace_once(frase_in_gioco, "________", g[i].mazzo[scelta[j]-1])); //inserisci parola in frase
 								strcpy(frase_in_gioco, g[i].frase);			                                               //aggiorna frase in gioco per il prossimo ciclo di j
