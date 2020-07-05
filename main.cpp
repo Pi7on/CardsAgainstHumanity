@@ -16,7 +16,6 @@
 #define MIN_POINTS 1  //numero minimo di round da giocare
 #define CPP 10        //cards per player
 
-//typedef tralasciato perché i warning mi davano fastidio
 struct Parola{
 	char parola[LEN];
 	bool usata=false;
